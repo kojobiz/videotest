@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 画像とビデオを重ねるためのスタイル */
+        .video-container {
+            position: relative;
+            display: inline-block;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-left:92px;
+            margin-top:-10px;
+        }
+        .video_pc {
+            width:742px;
+            height:368px;
+        }
+        .video {
+            width:552px;
+            height:353px;
+        }
+        @media screen and (max-width: 768px) {
+            .video_pc {
+                width: 80%; 
+                height:auto;
+            }
+            .video {
+                width: 60%; 
+                height:auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Videoテスト</h1>
+    <div class="video-container">
+    <img src="./img_function5_01.png" alt="" class="video_pc" >
+ 
+    <video width="552" height="353" controls autoplay loop muted poster="./v_assistantapi_poster.png" class="video">
+        <source src="v_assistantapi.mp4" type="video/mp4" >
+      </video>
+    </div> 
+</body>
+</html>
